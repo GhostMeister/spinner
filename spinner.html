@@ -1,0 +1,92 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Spinners</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			margin-top: auto;
+			font-family: "Open Sans";
+			overflow-x: hidden;			
+			color: #a0a0a0;
+		}
+
+		.container{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 90%;
+			height: 100%;
+			padding: 0 70px;
+		}
+
+		h1{ margin:50px 0 0 50px; }
+
+		.grid.three.column{
+			display: grid;
+			grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+			grid-column-gap: 5px;
+			grid-row-gap: 5px;
+		}
+
+		.spinner-1{
+			position:absolute;
+			top: 50%;
+			left: 10%;
+			width: 50px;
+			height: 50px;
+			margin-top: -25px;
+			margin-left: -25px;
+			border-radius: 50%;
+			border-top:2px solid rgba(255,0,171,0.8);
+			animation: spin 5s linear infinite;
+		}
+
+		.spinner-2{
+			position:absolute;
+			top: 50%;
+			left: 30%;
+			width: 50px;
+			height: 50px;
+			margin-top: -25px;
+			margin-left: -25px;
+			border-radius: 50%;
+			border:2px solid #c0c0c0;
+			border-top-color: rgba(255,0,171,0.8);
+			animation: spin 5s linear infinite;
+		}		
+
+		.spinner-3{
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			width: 50px;
+			height: 50px;
+			margin-top: -25px;
+			margin-left: -25px;
+			border:2px solid #c0c0c0;
+			border-radius: 50%;
+			border-left-color: rgba(255,0,171,0.8);			
+			border-right-color: rgba(255,0,171,0.8);
+			animation: spin 8s linear infinite;
+		}				
+
+		@keyframes spin{
+			to{ transform: rotate(360deg); }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Spinners</h1>
+		
+		<div>
+			<div class="spinner-1"></div>
+			<div class="spinner-2"></div>
+			<div class="spinner-3"></div>
+		</div>
+	</div>
+</body>
+</html>	
